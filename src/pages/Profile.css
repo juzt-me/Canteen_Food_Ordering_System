@@ -1,0 +1,133 @@
+.profile-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: start;
+  padding: 32px 0;
+}
+
+.profile-card {
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-size: 32px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 4px 14px rgba(249,115,22,0.4);
+}
+
+.profile-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.profile-info {
+  margin-top: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-info-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  background: var(--bg);
+  border-radius: 10px;
+}
+
+.profile-info-row svg {
+  font-size: 18px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.info-label {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.info-value {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.profile-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.profile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-action-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  text-decoration: none;
+  color: var(--text);
+  transition: var(--transition);
+}
+
+.profile-action-card:hover {
+  transform: translateX(4px);
+  border-color: var(--primary);
+}
+
+.action-icon {
+  font-size: 28px;
+  width: 52px;
+  height: 52px;
+  background: var(--bg);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.profile-action-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.profile-action-card p {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.profile-action-card > span {
+  margin-left: auto;
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .profile-layout { grid-template-columns: 1fr; }
+}
