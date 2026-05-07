@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { FiUser, FiMail, FiShield, FiCalendar } from 'react-icons/fi';
+import React from 'react';
+import { FiUser, FiMail, FiShield } from 'react-icons/fi';
 import { useAuth } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
 import './Profile.css';
@@ -14,7 +14,7 @@ export default function Profile() {
       <div className="container">
         <div className="profile-layout">
 
-          {/* Profile Card */}
+          {/* AFTER */}
           <div className="profile-card card">
             <div className="profile-avatar">
               {user.name?.charAt(0).toUpperCase()}
@@ -49,7 +49,7 @@ export default function Profile() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* AFTER */}
           <div className="profile-right">
             <h3 className="profile-section-title">Quick Actions</h3>
             <div className="profile-actions">

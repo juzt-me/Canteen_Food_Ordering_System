@@ -14,7 +14,7 @@ export default function Cart() {
   const [bookingLoading, setBookingLoading] = useState(true);
   const navigate = useNavigate();
 
-  // Fetch user's confirmed bookings
+  // AFTER
   useEffect(() => {
     api.get('/bookings')
       .then(r => setBookings(r.data.filter(b => b.status === 'CONFIRMED')))
@@ -68,7 +68,7 @@ export default function Cart() {
           <h1 className="page-title">Your Cart</h1>
         </div>
 
-        {/* Table Booking Banner */}
+        {/* AFTER */}
         {!bookingLoading && (
           <div className={`booking-banner ${hasActiveBooking ? 'booking-banner-success' : 'booking-banner-warn'}`}>
             <div className="booking-banner-icon">
@@ -126,7 +126,7 @@ export default function Cart() {
           <div className="cart-summary card">
             <h3>Order Summary</h3>
 
-            {/* Booking summary in sidebar */}
+            {/* AFTER */}
             {hasActiveBooking && (
               <div className="summary-booking">
                 <FiCalendar />

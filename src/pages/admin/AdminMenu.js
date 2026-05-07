@@ -13,14 +13,14 @@ export default function AdminMenu() {
   const [showForm, setShowForm] = useState(false);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState('');
-  const [imageMode, setImageMode] = useState('url'); // 'url' | 'upload'
+  const [imageMode, setImageMode] = useState('url'); // AFTER
   const [imagePreview, setImagePreview] = useState('');
   const fileInputRef = useRef(null);
 
   const fetchItems = () => api.get('/menu').then(r => setItems(r.data));
   useEffect(() => { fetchItems(); }, []);
 
-  // Handle file upload → convert to base64
+  // AFTER
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -106,21 +106,21 @@ export default function AdminMenu() {
             </div>
 
             <form onSubmit={handleSubmit} className="admin-form-grid">
-              {/* Name */}
+              {/* AFTER */}
               <div className="form-group">
                 <label className="form-label">Name</label>
                 <input type="text" className="form-input" value={form.name} required
                   onChange={e => setForm(p => ({ ...p, name: e.target.value }))} />
               </div>
 
-              {/* Price */}
+              {/* AFTER */}
               <div className="form-group">
                 <label className="form-label">Price (₹)</label>
                 <input type="number" className="form-input" value={form.price} required
                   onChange={e => setForm(p => ({ ...p, price: e.target.value }))} />
               </div>
 
-              {/* Image — URL or Upload */}
+              {/* AFTER */}
               <div className="form-group">
                 <label className="form-label">Image</label>
                 <div className="image-mode-tabs">
@@ -166,7 +166,7 @@ export default function AdminMenu() {
                 )}
               </div>
 
-              {/* Category */}
+              {/* AFTER */}
               <div className="form-group">
                 <label className="form-label">Category</label>
                 <select className="form-input" value={form.category}
@@ -175,7 +175,7 @@ export default function AdminMenu() {
                 </select>
               </div>
 
-              {/* Available */}
+              {/* AFTER */}
               <div className="form-group">
                 <label className="form-label">Available</label>
                 <select className="form-input" value={form.available}
@@ -185,7 +185,7 @@ export default function AdminMenu() {
                 </select>
               </div>
 
-              {/* Image Preview (URL mode) */}
+              {/* AFTER */}
               {imageMode === 'url' && imagePreview && (
                 <div className="form-group url-preview-wrap">
                   <label className="form-label">Preview</label>
@@ -194,7 +194,7 @@ export default function AdminMenu() {
                 </div>
               )}
 
-              {/* Description */}
+              {/* AFTER */}
               <div className="form-group" style={{ gridColumn: '1 / -1' }}>
                 <label className="form-label">Description</label>
                 <textarea className="form-input" rows={2} value={form.description}
@@ -210,7 +210,7 @@ export default function AdminMenu() {
           </div>
         )}
 
-        {/* Table */}
+        {/* AFTER */}
         <div className="admin-table card">
           <table>
             <thead>

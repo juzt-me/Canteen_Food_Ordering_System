@@ -36,7 +36,7 @@ export default function OrderDetail() {
           <p className="page-subtitle">{new Date(order.createdAt).toLocaleString()}</p>
         </div>
 
-        {/* Status Tracker */}
+        {/* AFTER */}
         <div className="card status-tracker">
           <div className="tracker-steps">
             {STATUS_STEPS.map((step, i) => (
@@ -49,10 +49,10 @@ export default function OrderDetail() {
           </div>
         </div>
 
-        {/* Two column layout: Order + Bookings */}
+        {/* AFTER */}
         <div className="order-detail-layout">
 
-          {/* Left: Order Items */}
+          {/* AFTER */}
           <div>
             <div className="card order-detail-items">
               <h3><FiPackage /> Items Ordered</h3>
@@ -79,7 +79,7 @@ export default function OrderDetail() {
             )}
           </div>
 
-          {/* Right: Booking History */}
+          {/* AFTER */}
           <div className="card booking-history-card">
             <div className="booking-history-header">
               <h3><FiCalendar /> Table Bookings</h3>

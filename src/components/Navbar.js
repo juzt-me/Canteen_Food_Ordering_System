@@ -15,7 +15,7 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  // Close dropdown when clicking outside
+  // AFTER
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -63,7 +63,7 @@ export default function Navbar() {
                 {itemCount > 0 && <span className="cart-badge">{itemCount}</span>}
               </Link>
 
-              {/* Click-based dropdown */}
+              {/* AFTER */}
               <div className="user-menu" ref={dropdownRef}>
                 <button
                   className={`icon-btn user-icon-btn ${dropdownOpen ? 'active' : ''}`}
@@ -76,7 +76,7 @@ export default function Navbar() {
 
                 {dropdownOpen && (
                   <div className="user-dropdown">
-                    {/* Header */}
+                    {/* AFTER */}
                     <div className="user-dropdown-header">
                       <div className="user-avatar">
                         {user.name?.charAt(0).toUpperCase()}
